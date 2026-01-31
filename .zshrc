@@ -41,12 +41,14 @@ alias nv='nvim'
 alias bat='bat --style=auto'
 alias lx='exa --icons -la'
 alias trx='exa -a .?* --icons --tree'
+alias ff='fastfetch'
 
 alias sozsh='source ~/.zshrc'
 alias zshrc='nvim ~/.zshrc'
 alias nvrc='cd ~/.config/nvim && nvim .'
 alias envrc='cd /mnt/c/Users/muril/.config && nvim .'
 alias tmuxrc='cd ~/.config/tmux && nvim .'
+alias dotfiles='cd ~/dotfiles && nvim .'
 
 alias tmxa='tmux attach'
 

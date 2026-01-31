@@ -5,15 +5,15 @@ map("i", "jk", "<ESC>")
 
 map({ "n", "i", "v" }, "<C-s>", ":wa<CR>")
 
-map("n", "<leader>q", ":q<CR>")
+map("n", "<leader>q", ":q!<CR>")
 
 map("n", "<ESC>", ":nohlsearch<CR>")
 
-map("n", "<leader>bd", ":bd<CR>", { desc = "Close buffer" })
+map("n", "<leader>bc", ":bd<CR>", { desc = "Close buffer" })
+map("n", "<leader>bd", ":%bd<CR>", { desc = "Close all buffers" })
 
-map({ "n", "i", }, "<C-y>", "Vy", { desc = "Copy line" })
-map({ "n", "i", }, "<C-x>", "Vd", { desc = "Delete line and add to clipboard" })
-map("v", "<C-b>", "\"_d", { desc = "Delete line lipboard" })
+map({ "n", "i", }, "<C-y>", "<ESC>Vy<ESC>i", { desc = "Copy line" })
+map({ "n", "i" }, "<C-i>", "<ESC>viwy<ESC>i", { desc = "Copy word" })
 
 -- map("n", "<leader>cw", function ()
 -- 	local cursor_pos = vim.api.nvim_win_get_cursor(0)

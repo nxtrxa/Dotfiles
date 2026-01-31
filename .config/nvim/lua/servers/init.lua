@@ -36,3 +36,14 @@ vim.lsp.enable({
 	"efm",
 	"vue_ls",
 })
+
+vim.diagnostic.config({
+    virtual_text = false,
+    signs = false,
+    update_in_insert = false,
+    underline = false, -- This is what controls the squiggles
+    severity_sort = true,
+    float = {
+        source = "always",
+    },
+})

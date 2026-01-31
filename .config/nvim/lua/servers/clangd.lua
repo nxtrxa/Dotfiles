@@ -6,7 +6,14 @@ return function(capabilities)
 		cmd = {
 			"clangd",
 			"--offset-encoding=utf-16",
+			"--background-index",
+			"--clang-tidy",
+			"--header-insertion=iwyu",
 		},
-		filetypes = { "c", "cpp" },
+		filetypes = { "c", "cpp", "h", "hpp", "cu", "cxx"},
+		init_options = {
+			fallbackFlags = {
+			}
+		},
 	})
 end

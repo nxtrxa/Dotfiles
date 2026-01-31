@@ -9,6 +9,12 @@ return {
 				  color = "#471474",
 				  cterm_color = "209",
 				  name = "C3"
+				},
+				c3i = {
+				  icon = "",
+				  color = "#00ffff",
+				  cterm_color = "209",
+				  name = "C3i"
 				}
 			},
 			override_by_extension = {
@@ -16,6 +22,11 @@ return {
 				  icon = " ",
 				  color = "#471474",
 				  name = "C3"
+				},
+				["c3i"] = {
+				  icon = " ",
+				  color = "#00ffff",
+				  name = "C3i"
 				},
                 ["blade.php"] = {
                     icon="",

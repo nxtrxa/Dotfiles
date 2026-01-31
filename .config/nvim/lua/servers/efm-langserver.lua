@@ -13,16 +13,12 @@ return function(capabilities)
 	local shellcheck = require("efmls-configs.linters.shellcheck") -- bash linter
 	local shfmt = require("efmls-configs.formatters.shfmt") -- bash formatter
 	local hadolint = require("efmls-configs.linters.hadolint") -- docker linter
-	local cpplint = require("efmls-configs.linters.cpplint") -- c/c3/cpp linter
 	local clangformat = require("efmls-configs.formatters.clang_format") -- c/cpp formatter
 	local solhint = require("efmls-configs.linters.solhint") -- solidity linter
 
 	vim.lsp.config("efm", {
 		capabilities = capabilities,
 		filetypes = {
-			"c",
-			"c3",
-			"cpp",
 			"css",
 			"docker",
 			"go",
@@ -51,9 +47,9 @@ return function(capabilities)
 		},
 		settings = {
 			languages = {
-				c = { clangformat, cpplint },
-				c3 = { clangformat, cpplint },
-				cpp = { clangformat, cpplint },
+				-- c = { clangformat, cpplint },
+				-- c3 = { clangformat, cpplint },
+				-- cpp = { clangformat, cpplint },
 				css = { prettier_d },
 				docker = { hadolint, prettier_d },
 				go = { gofumpt, go_revive },
