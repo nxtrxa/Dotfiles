@@ -1,0 +1,29 @@
+# Ignore everything by default
+*
+!*/
+
+# Allowlist the .gitignore file itself
+!.gitignore
+
+# Allowlist specific configuration directories
+!nvim/
+!tmux/
+!yazi/
+!zsh/
+
+# Allowlist specific config files inside those directories
+!nvim/*.lua
+!tmux/*.tmux
+!tmux/plugins/*
+!tmux/scripts/*
+!yazi/*.toml
+!zsh/*.zsh
+!zsh/*.sh
+!zsh/plugins/*
+!zsh/.zshrc
+
+# Explicitly ignore sensitive/cache patterns inside allowed directories
+**/.DS_Store
+**/*.log
+**/cache/
+**/secrets/
