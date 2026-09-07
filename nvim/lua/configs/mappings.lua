@@ -22,6 +22,7 @@ map("n", "<leader>mm", "ggVG", { desc = "Select all text" })
 
 map("n", "<leader>bc", ":bd!<CR>", { desc = "Close buffer" })
 map("n", "<leader>ba", ":%bd!<CR>", { desc = "Close all buffers" })
+map("n", "<leader>bs", ":bp | bd #<CR>", { desc = "Close split" })
 
 map("n", "<leader>chx", ":!chmod +x %<CR>", { desc = "Make file executable" })
 map("n", "<leader>chw", ":!chmod +w %<CR>", { desc = "Make file writable" })
@@ -229,10 +230,10 @@ end, { desc = "Diff this" })
 --------------------------------------------------
 -- Diagnostics
 --------------------------------------------------
-map("n", "gl", function()
+map("n", "gL", function()
 	vim.diagnostic.setloclist({ open = true })
 end, { desc = "Open diagnostic list" })
-map("n", "gL", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+map("n", "gl", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 
 --------------------------------------------------
 -- Misc plugins
@@ -362,4 +363,3 @@ map("t", "<c-n>", "<cmd><C-U>TmuxNavigatePrevious<cr>", { desc = "tmux navigate 
 
 -- Render Markdown
 map("n", "<leader>mt", ":RenderMarkdown toggle<CR>", { desc = "Toggle md rendering" })
-

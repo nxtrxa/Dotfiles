@@ -31,6 +31,36 @@ vim.diagnostic.config({
 	},
 })
 
+local mason = require("mason")
+local mason_lsp = require("mason-lspconfig")
+
+mason.setup({
+	ui = {
+		icons = {
+			package_installed = "✓",
+			package_pending = "➜",
+			package_uninstalled = "✗",
+		},
+	},
+})
+
+mason_lsp.setup({
+	ensure_installed = {
+		"lua_ls",
+		"clangd",
+		"fortls",
+		"jsonls",
+		"bashls",
+		"dockerls",
+		"html",
+		"cssls",
+		"phpactor",
+		"tailwindcss",
+		"efm",
+	},
+	automatic_installation = true,
+})
+
 -- do
 -- 	local orig = vim.lsp.util.open_floating_preview
 -- 	function _G.open_floating_preview(contents, syntax, opts, ...)
@@ -209,4 +239,5 @@ vim.lsp.enable({
 	"clangd",
 	"c3-lsp",
 	"efm",
+	"fortls",
 })

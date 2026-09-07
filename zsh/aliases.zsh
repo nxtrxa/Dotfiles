@@ -28,6 +28,7 @@ alias c3std='cd /usr/lib/c3c/lib/std && nvim .'
 
 alias py='python3'
 alias cl='clang'
+alias gf='gfortran'
 
 # Git
 alias gc="git commit -m"

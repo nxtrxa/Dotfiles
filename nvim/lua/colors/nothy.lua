@@ -7,18 +7,19 @@ local palette = {
 	p1 = "#F72585",
 	p2 = "#00FFFF",
 	p3 = "#B5149E",
-	p4 = "#7009B7",
+	p4 = "#7404C3",
 	p5 = "#9372f7",
 	p6 = "#654f7f",
 	d1 = "#360567",
-	d2 = "#C0ffEE",
+	d2 = "#C0FFEE",
 	d3 = "#741447",
 	g1 = "#12B2E2",
 	g2 = "#00cecb",
 	g3 = "#ae0072",
-	m2 = "#9bc1bc",
+	m1 = "#0e2f93",
+	m2 = "#ae4af7",
 	m3 = "#C399F9",
-	m4 = "#4a00ae",
+	m4 = "#4a72f7",
 }
 
 local function hl(name, opts)
@@ -32,11 +33,11 @@ local function set_core()
 	hl("CursorColumn", { bg = nil })
 	hl("ColorColumn", { bg = palette.d2 })
 	hl("LineNr", { fg = palette.m2 })
-	hl("Comment", { fg = palette.p5, italic = true })
+	hl("Comment", { fg = palette.m3, italic = true })
 	hl("Constant", { fg = palette.p3 })
 	hl("Identifier", { fg = palette.p2 })
 	hl("Statement", { fg = palette.p4 })
-	hl("PreProc", { fg = palette.p5, bold = true })
+	hl("PreProc", { fg = palette.g3, bold = true })
 	hl("Type", { fg = palette.m4, bold = true })
 	hl("Special", { fg = palette.g3 })
 	hl("Underlined", { fg = palette.g2, underline = false })
@@ -63,20 +64,21 @@ end
 
 local function set_treesitter()
 	hl("@comment", { fg = palette.p1, italic = true })
-	hl("@constant", { fg = palette.p3 })
+	hl("@constant", { fg = palette.m1 })
 	hl("@string", { fg = palette.m3 })
-	hl("@type", { fg = palette.d3 })
+	hl("@type", { fg = palette.g1 })
 	hl("@function", { fg = palette.p4, italic = true })
-	hl("@function.builtin", { fg = palette.g2, italic = true })
+	hl("@function.builtin", { fg = palette.m1, italic = true })
 	hl("@parameter", { fg = palette.p6, italic = true })
-	hl("@keyword", { fg = palette.g2, bold = true, italic = true })
+	hl("@keyword", { fg = palette.m1, bold = true, italic = true })
 	hl("@conditional", { fg = palette.p2 })
 	hl("@property", { fg = palette.p4 })
 	hl("@namespace", { fg = palette.p3, bold = true, italic = true })
 	hl("@string.regex", { fg = palette.g3 })
 	hl("@constructor", { fg = palette.d3 })
 	hl("@comment.documentation", { fg = palette.p1, italic = true })
-	hl("@variable", { fg = palette.g3, italic = true })
+	hl("@variable", { fg = palette.m2, italic = true })
+	hl("@builtin", { fg = palette.m1, italic = true })
 
 	-- editor-level String too
 	hl("String", { fg = palette.m3 })

@@ -1,6 +1,7 @@
 # Ignore everything by default
 *
 !*/
+!**/
 
 # Allowlist the .gitignore file itself
 !.gitignore

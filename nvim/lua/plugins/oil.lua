@@ -50,7 +50,7 @@ require("oil").setup({
 		["g."] = { "actions.toggle_hidden", mode = "n" },
 		["g\\"] = { "actions.toggle_trash", mode = "n" },
 	},
-	use_default_keymaps = true,
+	use_default_keymaps = false,
 	view_options = {
 		show_hidden = true,
 		is_hidden_file = function(name, bufnr)
